@@ -25,11 +25,11 @@ results = []
 for page in range(1, 11):
     # Add the current page parameter to the API request
     params['page'] = page
-    
+
     # Call the API and get the response data
     response = requests.get(endpoint, params=params)
     data = json.loads(response.text)
-      
+
     # Extract the relevant fields from each article and append them to the results list
     for article in data['response']['results']:
         results.append({
