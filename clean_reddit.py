@@ -90,14 +90,14 @@ def main():
 
                     post_date = date.fromtimestamp(post_data['created'])
                     result_articles.append({
-                        'ARTICLE_ID': post_data['name'],
+                        'ID': post_data['name'],
                         'URL': post_data['url'],
                         'DATE': post_date.isoformat(),
                         'PLAIN_TEXT': post_data['selftext'],
                         'SOURCE': f"Reddit /r/{subreddit}"
                     })
                     result_sentiment_ratings.append({
-                        'ARTICLE_ID': post_data['name'],
+                        'ID': post_data['name'],
                         'METHOD': "reddit_post_score",
                         'RATING': post_data['score'],
                     })
@@ -155,6 +155,8 @@ def main():
     df['PLAIN_TEXT'] = df['PLAIN_TEXT'].str.replace('\\', '', regex = False)
 
     df['URL'] = df['URL'].str.replace('\\', '', regex=False)
+
+    df = df[df['PLAIN_TEXT'] != ""]
 
     df.to_json('reddit_articles.json', orient='records')
 

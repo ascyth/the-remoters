@@ -12,7 +12,7 @@ import datetime
 # Set the API endpoint and parameters
 endpoint = 'https://content.guardianapis.com/search'
 params = {
-    'q': 'remote work',  # search query
+    'q': '(work OR working) AND (home OR remote OR remotely) AND NOT cup',  # search query
     'page-size': 100,  # number of results per page
     'api-key': '7067aedc-f50c-430e-8971-acba247ab46a',  # replace with your API key
     'show-fields': 'body'
@@ -20,9 +20,10 @@ params = {
 
 # Initialize the list to store the results
 results = []
-
-# Loop through 10 pages (total of 1000 results)
-for page in range(1, 11):
+sections = ['money' , 'science' , 'business' , 'commentisfree' , 'society' , 'technology' , 'lifeandstyle', 'world', 'environment']
+bad_sections = ['football']
+# Loop through 5 pages (total of 500 results)
+for page in range(1, 6):
     # Add the current page parameter to the API request
     params['page'] = page
 
@@ -32,6 +33,27 @@ for page in range(1, 11):
 
     # Extract the relevant fields from each article and append them to the results list
     for article in data['response']['results']:
+        # filter out interactive articles as these don't have a body text 
+        if article['fields']['body'] == ' Interactive ':
+            continue
+        
+        invalid_category = False
+        for category in bad_sections:
+            if category in article['webUrl']:
+                invalid_category = True
+                break
+            
+        if invalid_category:
+            continue
+
+        valid_category = False
+        for category in sections:
+            if category in article['webUrl']:
+                valid_category = True
+                break
+        if not valid_category:
+            continue
+
         results.append({
             'ID': article['id'],
             'URL': article['webUrl'],
@@ -65,5 +87,6 @@ df['PLAIN_TEXT'] = df['PLAIN_TEXT'].apply(remove_quotes_and_backslashes)
 df['PLAIN_TEXT'] = df['PLAIN_TEXT'].str.replace('\\', '', regex = False)
 
 df['DATE'] = pd.to_datetime(df['DATE'], unit='s').dt.strftime('%Y-%m-%d %H:%M:%S')
+df = df.drop_duplicates(subset='PLAIN_TEXT', keep="first")
 
 df.to_json('guardian_articles.json', orient='records')
