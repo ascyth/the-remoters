@@ -1,7 +1,7 @@
 # Tech Report:
 
 
-There are 1000 data points representing The Guardian articles, 640 data points representing Reddit posts and 900 data points representing the New York Times articles. Hence, all together we have 2,540 data points. Our data is cleaned and free of any duplicates. We believe this data is sufficient to perform our data as it gives us plenty of input to feed an AI/ML algorithm. 
+There are 295 data points representing The Guardian articles, 640 data points representing Reddit posts and 215 data points representing the New York Times articles. Hence, all together we have 1150 data points. Our data is cleaned and free of any duplicates. We believe this data is sufficient to perform our data as it gives us plenty of input to feed an AI/ML algorithm. 
   
 Our identifying attributes include the ARTICLE_ID, URL, DATE, PLAIN_TEXT and SOURCE. The ARTICLE_ID is a unique ID that distinguishes the articles from each other, retrieved from the source (the Guardian, Reddit and the New York Times). 
   
