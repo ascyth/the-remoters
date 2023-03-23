@@ -1,7 +1,7 @@
 # Tech Report:
 
 
-When first scraping, we obtained 500 data points representing The Guardian articles, 645 data points representing Reddit posts and 900 data points representing the New York Times articles, for a total of 2045 articles. After cleaning and deduplication, we obtained 1550 records, 548 from Reddit, 307 from the NYT, and and 295 from the Guardian. Our data is cleaned and free of any duplicates. We believe this data is sufficient to perform our data as it gives us plenty of input to feed an AI/ML algorithm. 
+When first scraping, we obtained 500 data points representing The Guardian articles, 645 data points representing Reddit posts and 900 data points representing the New York Times articles, for a total of 2045 articles. After cleaning and deduplication, we obtained 1150 records, 548 from Reddit, 307 from the NYT, and and 295 from the Guardian. Our data is cleaned and free of any duplicates. We believe this data is sufficient to perform our data as it gives us plenty of input to feed an AI/ML algorithm. 
   
 Our identifying attributes include the ID, URL, DATE, PLAIN_TEXT and SOURCE. The ID is a unique ID that distinguishes the articles from each other, retrieved from the source (the Guardian, Reddit and the New York Times). 
   
