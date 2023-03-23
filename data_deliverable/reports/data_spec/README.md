@@ -7,7 +7,7 @@ DATE: A YYYY-MM-DD string representing the date in which the article was publish
 
 PLAIN_TEXT: The bulk of the data we will be using in our analysis. A long string of text that has been cleaned to contain only alphanumeric characters. Variable range and contents, but is related to the ‘remote work’ keyword. Words within the PLAIN_TEXT can be repeated but PLAIN_TEXTs should not be duplicates of other PLAIN_TEXTs. Required value. 
 
-SOURCE: The source of the Article. Either Reddit /r/programming, Reddit /r/experienceddevs, Reddit /r/cscarreerquestions, The Guardian, or the New York Times. Required value, and the range is between these three values listed. No default value. 295 from the Guardian, 548 from Reddit, 307 from NYT. 
+SOURCE: The source of the Article. Either Reddit /r/programming, Reddit /r/experienceddevs, Reddit /r/cscarreerquestions, The Guardian, or the New York Times. Required value, and the range is between these five values listed. No default value. 295 from the Guardian, 548 from Reddit, 307 from NYT. 
 
 # Sentiment Rating
 ID: Links back to the Article’s ID in the ‘Articles’ data. Required, not unique.
