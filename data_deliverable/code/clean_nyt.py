@@ -4,7 +4,11 @@ import pandas as pd
 import re
 from unidecode import unidecode
 import datetime
+<<<<<<< Updated upstream:data_deliverable/code/clean_nyt.py
 import time
+=======
+from bs4 import BeautifulSoup
+>>>>>>> Stashed changes:clean_nyt.py
 
 API_KEY = 'ROUxHvEwZzYUQYLlWYbYR8I9WMSAxa6O'
 URL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json'
@@ -66,3 +70,17 @@ df['PLAIN_TEXT'] = df['PLAIN_TEXT'].str.replace('\\', '', regex = False)
 df['DATE'] = pd.to_datetime(df['DATE'], unit='s').dt.strftime('%Y-%m-%d')
 
 df.to_json('nytimes_articles.json', orient='records')
+
+"""
+url = "https://www.nytimes.com/2023/03/21/world/europe/russia-ukraine-war.html"
+page = requests.get(url)
+soup = BeautifulSoup(page.content, "html.parser")
+
+article_body = soup.find("div", {"class": "css-53u6y8"})
+body_text = ""
+
+for paragraph in article_body.find_all("p"):
+    body_text += paragraph.get_text()
+
+print(body_text)
+"""
