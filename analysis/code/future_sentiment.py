@@ -3,6 +3,7 @@ import json
 from sklearn.model_selection import KFold, GridSearchCV
 from sklearn.linear_model import LinearRegression
 import numpy as np
+from sklearn.metrics import mean_squared_error
 
 sent_path = '..\data\combined_scored_sentiment_ratings.json'
 art_path = '..\..\data_deliverable\data_files\combined_articles.json'
@@ -22,7 +23,7 @@ df = pd.concat([id_series, date_series, rating_series], axis=1)
 
 df['DATE'] = pd.to_datetime(df['DATE'])
 
-df.to_json('clean_sentiment_data.json', orient='records')
+df.to_json('sentiment_clean_data.json', orient='records')
 
 # # Define your features (past sentiment scores) and target (future sentiment score)
 x = df[df['DATE'].dt.year.isin([2020, 2021])]
@@ -61,12 +62,13 @@ r_sq = model.score(x, y)
 intercept = model.intercept_
 coef = model.coef_.tolist()
 y_pred = model.predict(x).tolist()
+mse = mean_squared_error(y, y_pred)
 
 output = {
     "r_sq": r_sq,
     "intercept": intercept,
     "coef": coef,
-    "y_pred": y_pred
+    "mse": mse
 }
 
 with open('regression_output.json', 'w') as f:
