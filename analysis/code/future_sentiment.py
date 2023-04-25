@@ -22,7 +22,7 @@ df = pd.concat([id_series, date_series, rating_series], axis=1)
 
 df['DATE'] = pd.to_datetime(df['DATE'])
 
-df.to_json('guardian_articles.json', orient='records')
+df.to_json('clean_sentiment_data.json', orient='records')
 
 # # Define your features (past sentiment scores) and target (future sentiment score)
 x = df[df['DATE'].dt.year.isin([2020, 2021])]
