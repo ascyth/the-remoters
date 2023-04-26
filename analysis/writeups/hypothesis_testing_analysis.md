@@ -46,7 +46,7 @@ I am  confident in the accuracy of the data and test and am convinced that there
 
 So, we must deny the third hypothesis.
 
-### Hypothesis 4: Sentiments regarding work from home are not different in the ExperiencedDevs and csCareerQuestions subreddits.
+### Hypothesis 4: Sentiments regarding work from home are different in the ExperiencedDevs and csCareerQuestions subreddits.
 
 2 Sample T-Test: Reddit ExperiencedDevs Subreddit Sentiments vs. csCareerQuestions Subreddit Sentiments
 
