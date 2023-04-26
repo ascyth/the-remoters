@@ -10,7 +10,7 @@ df = pd.merge(sents, arts, how= 'inner', on= 'ID').reset_index()
 df = df[df['METHOD'] == 'roberta_average_sentence_sentiment_conf_scaled']
 df['DATE'] = pd.to_datetime(df['DATE'])
 yearly_sentiment = df.groupby(pd.Grouper(key='DATE', freq='Y'))['RATING'].mean().reset_index()
-print(yearly_sentiment)
+
 # Yearly plot
 plt.figure(figsize=(10,5))
 plt.bar(yearly_sentiment['DATE'].dt.year, yearly_sentiment['RATING'])
