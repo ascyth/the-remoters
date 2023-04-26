@@ -14,6 +14,10 @@ What is your interpretation of the results? Do you accept or deny the hypothesis
 tstats:  -1.3343817237423585
 pvalue:  0.18234339804003583
  
+ For the first test, the null hypothesis would be that there is no difference in sentiments between Reddit and article (NYT and The Guardian) sentiments. The t-statistic is -1.334 and the p-value is 0.182, which indicates that we fail to reject the null hypothesis. This means that there is no statistically significant difference in sentiments between Reddit and article sentiments.
+
+
+
 ## Hypothesis 3: Sentiments regarding work from home are differrent in The Gaurdian articles compared to in The New York Times articles.
 
 
@@ -22,9 +26,15 @@ pvalue:  0.18234339804003583
 tstats:  -0.18621426018881315
 pvalue:  0.8523396810379122
 
+For the second test, the null hypothesis would be that there is no difference in sentiments between The Guardian and NYT sentiments. The t-statistic is -0.186 and the p-value is 0.852, which also indicates that we fail to reject the null hypothesis. This means that there is no statistically significant difference in sentiments between The Guardian and NYT sentiments.
+
+
 ## Hypothesis 4: Sentiments regarding work from home are not different in the ExperiencedDevs and csCareerQuestions subreddits.
 
 2 Sample T-Test: Reddit ExperiencedDevs Subreddit Sentiments vs. csCareerQuestions Subreddit Sentiments
 
 tstats:  -1.3413360299554022
 pvalue:  0.18036903120534806
+
+For the third test, the null hypothesis would be that there is no difference in sentiments between ExperiencedDevs and csCareerQuestions subreddits. The t-statistic is -1.341 and the p-value is 0.180, which again indicates that we fail to reject the null hypothesis. However, the p-value is close to the significance level of 0.05, which suggests that there may be a possible difference in sentiments between the two subreddits.
+
