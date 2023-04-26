@@ -1,6 +1,6 @@
 # Hypothesis Testing Analysis
 
-Provide a description of the result and adequate complementary information describing and motivating your process:
+`Provide a description of the result and adequate complementary information describing and motivating your process:
 Why did you use this statistical test? Which other tests did you consider or evaluate? Did you have to clean or restructure your data?
 What is your interpretation of the results? Do you accept or deny the hypothesis, or are you satisfied with your prediction accuracy? For prediction projects, we expect you to argue why you got the accuracy/success metric you have. Intuitively, how do you react to the results? Are you confident in the results?`
 
