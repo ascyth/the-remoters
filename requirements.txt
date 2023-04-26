@@ -4,3 +4,5 @@ scipy
 requests
 sqlite3
 nltk
+datasets
+evaluate
