@@ -30,9 +30,9 @@ The null hypothesis is that there is no difference in sentiments between Reddit 
 
 I am fairly confident in the accuracy of the data and test and am convinced that there is no statistically significant difference between the sentiments across the two sides. I believe that both reddit and news articles have a wide range of opinions on work from home and there is not a consistent bias in either of them against or in favor of work from home.
 
-So, we must deny the second hypothesis.
+So, we must deny the second hypothesis. Hence, this result is not in line with our prediction that sentiments would be different between reddit and news articles. This could possibly be due to the negative bias that we discuss in our general write-up.
 
-### Hypothesis 3: Sentiments regarding work from home are differrent in The Gaurdian articles compared to in The New York Times articles.
+### Hypothesis 3: Sentiments regarding work from home are similiar in The Gaurdian articles compared to in The New York Times articles.
 
 
 2 Sample T-Test: The Guardian Sentiments vs. NYT Sentiments
@@ -44,9 +44,9 @@ The null hypothesis is that there is no difference in sentiments between The Gua
 
 I am  confident in the accuracy of the data and test and am convinced that there is no statistically significant difference between the sentiments across the two news sources. I believe that both newspapers have a range of opinions on work from home and do not differ too much in the way they discuss work from home in their articles.
 
-So, we must deny the third hypothesis.
+So, we cannot reject the null hypothesis, meaning that we can accept the third hypothesis. Hence, this result is in line with our prediction that sentiments would be uniform among newspapers.
 
-### Hypothesis 4: Sentiments regarding work from home are different in the ExperiencedDevs and csCareerQuestions subreddits.
+### Hypothesis 4: Sentiments regarding work from home are similiar in the ExperiencedDevs and csCareerQuestions subreddits.
 
 2 Sample T-Test: Reddit ExperiencedDevs Subreddit Sentiments vs. csCareerQuestions Subreddit Sentiments
 
@@ -57,4 +57,6 @@ The null hypothesis is that there is no difference in sentiments between Experie
 
 Although I am confident in the accuracy of the data and test, I would be interested in perhaps collecting more data to check if it is possible for the pvalue to converge to 0.05. Although there is no statistically significant difference between the subreddits, the p-value being close to 0.05 implies that the results may change if more data is collected.
 
-So, although we cannot accept the fourth hypothesis and must deny it, we can possibly investigate more with regard to this hypothesis since the p value is relatively close to 0.05.
+So, we cannot reject the null hypothesis, meaning that we can accept the fourth hypothesis. Hence, this result is in line with our prediction that sentiments would be uniform among subreddits.
+
+However, we can possibly investigate more with regard to this hypothesis since the p value is relatively close to 0.05.
