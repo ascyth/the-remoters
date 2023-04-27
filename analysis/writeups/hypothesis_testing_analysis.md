@@ -1,25 +1,13 @@
 # Hypothesis Testing Analysis
 
-`Provide a description of the result and adequate complementary information describing and motivating your process:
-Why did you use this statistical test? Which other tests did you consider or evaluate? Did you have to clean or restructure your data?
-What is your interpretation of the results? Do you accept or deny the hypothesis, or are you satisfied with your prediction accuracy? For prediction projects, we expect you to argue why you got the accuracy/success metric you have. Intuitively, how do you react to the results? Are you confident in the results?`
-
 In order to test all our hypotheses, we had to restructure our data by combining our combined articles/posts data (combined_articles.json) with our combined sentiment ratings data (combined_scored_sentiment_ratings.json). We considered sentiment ratings calculated using the roberta_average_sentence_sentiment_conf_scaled method.
-
-## Part 1
-### Hypothesis 1: Work from home has received an increasingly positive sentiment in recent years (2020 - 2023)
-
-
-
-
-## Part 2
 
 For the hypotheses below, we used two-sample t-tests as we wanted to compare the means of two independent samples of sentiment ratings to determine if they are statistically significantly different, in order to check if sentiments regarding work from home vary between sources (news sources or reddit forums).
 
 We considered various tests (that we did not see in class) for testing the hypotheses below, including ANOVA, Mann-Whitney U-test, and Kruskal-Wallis test.
 However, we decided on two-sample t-tests as the test is convenient for testing hypotheses with two samples (like in our case). Moreover, the independent samples t-test assumes that the data is normally distributed, which is often the case for sentiment ratings. If the data is normally distributed, the t-test is known to be a better testing option compared to non-parametric tests like the Mann-Whitney U-test or Kruskal-Wallis test. Also, it was convenient to import ttest_ind from the scipy.stats package, making it a more accessible and easy to use the 2-sample t-test.
 
-### Hypothesis 2: Sentiments regarding work from home are differrent in news source articles compared to in Reddit posts.
+### Hypothesis 1: Sentiments regarding work from home are differrent in news source articles compared to in Reddit posts.
 
 2 Sample T-Test: Reddit Sentiments vs. Article (NYT & The Guardian) Sentiments
 
@@ -32,7 +20,7 @@ I am fairly confident in the accuracy of the data and test and am convinced that
 
 So, we must deny the second hypothesis. Hence, this result is not in line with our prediction that sentiments would be different between reddit and news articles. This could possibly be due to the negative bias that we discuss in our general write-up.
 
-### Hypothesis 3: Sentiments regarding work from home are similiar in The Gaurdian articles compared to in The New York Times articles.
+### Hypothesis 2: Sentiments regarding work from home are similiar in The Gaurdian articles compared to in The New York Times articles.
 
 
 2 Sample T-Test: The Guardian Sentiments vs. NYT Sentiments
@@ -46,7 +34,7 @@ I am  confident in the accuracy of the data and test and am convinced that there
 
 So, we cannot reject the null hypothesis, meaning that we can accept the third hypothesis. Hence, this result is in line with our prediction that sentiments would be uniform among newspapers.
 
-### Hypothesis 4: Sentiments regarding work from home are similiar in the ExperiencedDevs and csCareerQuestions subreddits.
+### Hypothesis 3: Sentiments regarding work from home are similiar in the ExperiencedDevs and csCareerQuestions subreddits.
 
 2 Sample T-Test: Reddit ExperiencedDevs Subreddit Sentiments vs. csCareerQuestions Subreddit Sentiments
 
