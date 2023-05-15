@@ -13,4 +13,4 @@ There are two ways that you can manipulate the parameters in the graph.
 
 You can also hover on the data points, which prompts a pop-up to appear near the point, displaying the article/post link. If you click on the data point, then the pop-up near the point will stay, unless you click on it again.
 
-![A preview of the interactive visualization.](/prev-viz.png)
+![A preview of the interactive visualization.](prev_viz.png)
