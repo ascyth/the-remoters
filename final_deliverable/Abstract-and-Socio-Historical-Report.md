@@ -58,8 +58,13 @@ The final ethical quandary we must discuss is potential misinterpretations of ou
 
 ## Works Cited: 
 [1] Coate, Patrick. “Remote Work Before, During, and After the Pandemic.” National Council on Compensation Insurance (NCCI), National Council on Compensation Insurance (NCCI), 25 Jan. 2021, https://www.ncci.com/SecureDocuments/QEB/QEB_Q4_2020_RemoteWork.html.
+
 [2] “COVID-19 Pandemic Triggers 25% Increase in Prevalence of Anxiety and Depression Worldwide.” World Health Organization (WHO), World Health Organization, 2 Mar. 2022, https://www.who.int/news/item/02-03-2022-covid-19-pandemic-triggers-25-increase-in-prevalence-of-anxiety-and-depression-worldwide.
+
 [3] Putzier, Konrad, and Peter Grant. “Record High Office Lease Expirations Pose New Threat to Landlords and Banks  - WSJ.” WSJ, The Wall Street Journal, 12 Apr. 2022, https://www.wsj.com/articles/record-high-office-lease-expirations-pose-new-threat-to-landlords-and-banks-11649764801.
+
 [4] “Is Remote Work Effective: We Finally Have the Data | McKinsey.” McKinsey & Company, McKinsey & Company, 23 June 2022, https://www.mckinsey.com/industries/real-estate/our-insights/americans-are-embracing-flexible-work-and-they-want-more-of-it.
+
 [5] Savage, Maddy. “What Bosses Really Think about Remote Work - BBC Worklife.” BBC - Homepage, BBC, 13 Sept. 2021, https://www.bbc.com/worklife/article/20210908-what-bosses-really-think-about-remote-work.
+
 [6] Bianchi, Tiago. “Reddit.Com Desktop Traffic Share 2022 | Statista.” Statista, Statista, 13 Jan. 2023, https://www.statista.com/statistics/325144/reddit-global-active-user-distribution/.
