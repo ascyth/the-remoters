@@ -1,14 +1,14 @@
-## Final Project Abstract by Nicholas Petrocelli, Johnny Boustany, David Lauerman, Max Dekle
+# Final Project Abstract by Nicholas Petrocelli, Johnny Boustany, David Lauerman, Max Dekle
 
-# Hypothesis:
+## Hypothesis:
 Remote work has been a topic of popular discussion in recent years, especially gaining traction during the COVID-19 pandemic when many businesses began to accommodate work-from-home policies in order to comply with social distancing guidelines. However, some companies have been advocating for a return to the office, despite pushback from their employees. Therefore, we wanted to analyze a diverse set of opinions to see if this was actually true – is remote work really on the decline, or is it here to stay? Given a diverse set of voices and datapoints, we set out to test the hypothesis that remote work sentiment has decreased over the past few years; in other words, remote work is not as popular as it used to be. 
 
-# Data:
+## Data:
 We combined 3 unique sources for our dataset: The Guardian, The New York Times, and Reddit. 307 and 295 articles were obtained from the NYT and the Guardian, respectively, by querying their APIs for articles about ‘remote work’. 548 Reddit posts were obtained by scraping the “experienceddevs” and “cscareerquestions” subreddits for posts containing the terms “remote work”, “work from home”, or “WFH”. A specific challenge that we faced was ensuring that most of the articles found during scraping were actually relevant to remote work, especially from NYT/ The Guardian; to alleviate this, we filtered such that only posts after Jan 1, 2020 were included, and filtered out certain confounding keywords during scraping. 
 
 Our identifying attributes for these entries include the ID, URL, DATE, PLAIN_TEXT and SOURCE. The ID is a unique ID that distinguishes the articles from each other, retrieved from the source (the Guardian, Reddit and the New York Times). The PLAIN_TEXT is a cleaned version of the article contents, having removed non-alphanumeric characters, inconsistent spacing, and ensuring all text is unicode. 
 
-# Findings:
+## Findings:
 We utilized the supervised pre-trained model known as RoBERTa, commonly used to evaluate Twitter sentiment, in order to generate sentiments for our data. Since the model can only evaluate strings up to 514 characters long, we utilized NLTK’s sentence tokenizer to obtain a sentiment for each sentence, the collection of which was averaged to obtain a single sentiment rating per article. The model was validated with a 0.71 overall testing accuracy, with the following metrics:
 
 | Metric    | Negative | Neutral | Positive | Average |
@@ -25,20 +25,20 @@ A low MSE suggests that the predicted values are very close to the actual values
 
 We additionally analyzed the following three hypotheses to gain insight into the integrity of our dataset:
 
-# Is the sentiment significantly different between news sources and Reddit?
+## Is the sentiment significantly different between news sources and Reddit?
 The t-statistic was -1.334 and the p-value 0.182, which indicates that we fail to reject the null hypothesis. This means that there is no statistically significant difference in sentiments between news sources and Reddit, as the p value was not less than 0.05.
 
-# Is the sentiment significantly different between the Guardian and NYT?
+## Is the sentiment significantly different between the Guardian and NYT?
 The t-statistic was -0.186 and the p-value 0.852, which also indicates that we fail to reject the null hypothesis. This means that there is no statistically significant difference in sentiments between The Guardian and NYT sentiments. 
 
-# Is the sentiment significantly different between the two subreddits?
+## Is the sentiment significantly different between the two subreddits?
 The t-statistic was -1.341 and the p-value 0.180, which again indicates that we fail to reject the null hypothesis. Thus, once again there is no significant difference in sentiments between the two subreddits. 
 
-# What can we conclude from our statistical analysis?
+## What can we conclude from our statistical analysis?
 We were not able to reject any of our null hypotheses above, which is a beneficial result to have because it means that our dataset is balanced between our sources. However, when considering the three p-values as a set, we can say that there is the least difference in sentiments between the Guardian and NYT compared to the other pairings, which makes sense intuitively as both are news sites and commonly publish similar articles. 
 
-## Socio-Historical Context and Impact Report:
-# Socio-Historical Context
+# Socio-Historical Context and Impact Report:
+## Socio-Historical Context
 This project is inseparable from the context of the COVID-19 pandemic and its economic effects. The pandemic has caused a number of substantial shifts in the structure of tech jobs, with one-third of all jobs in the US moving to full-remote in 2020 according to the National Council on Compensation Insurance [1]. It is this phenomenon that made collecting our data possible, as without it many fewer news articles about WFH would have been written and far fewer workers would have posted to Reddit about their experiences. However, there are additional historical factors that influenced our data, the most significant being the general decline in mental health during the pandemic. According to the WHO, the COVID-19 pandemic caused a 25% increase in the level of anxiety and depression worldwide [2]. This would make the overall sentiment on social media sites such as Reddit more negative and would likely influence the sentiment of journalists as well, even if only on a subconscious level. 
 
 Additionally, political tensions have risen in recent years, evidenced with Joe Biden’s election win, Donald Trump’s ongoing criminal investigation, and Boris Johnson resigning from office. These events could potentially indicate a loss in confidence in world leaders, which is exacerbated by the unpredictable actions of tech moguls Elon Musk and Mark Zuckerberg. Further, the Ukrainian invasion, Turkish earthquake, and Iranian protests may mean that workers are more focused on spending time with their families and communities and prefer work from home setups. The ever-changing oil prices, interest and inflation rates are also a factor in impacting the cost of commutes as well as monetary spending. 
@@ -47,7 +47,7 @@ There are three primary groups of stakeholders for our project. The first is the
 
 Much work has already been done in the polling sphere to track opinions of WFH policies, both from the perspective of rank-and-file workers and business owners or managers. As with all opinion polling, the results are not set in stone; however, the general consensus seems to be that WFH policies are much more popular with workers than owners, albeit with some nuances on both sides. For instance, the McKinsey Institute reported on their 2022 “American Opportunity Survey” that 87% of American workers would work remotely at least part-time if given the opportunity [4]; meanwhile, in 2021 the BBC reported that “In the US, a whopping 72% of managers currently supervising remote workers would prefer all their subordinates to be in the office…” [5]. This research has generally given the impression among tech workers that WFH policies are in danger of being revoked due to being disliked by management, and it is this impression that led us to pursue this topic for our analysis. However, it is important that we present our data in an unbiased manner, and not let our own biases influence our data analysis, presentation, and interpretation methodologies. 
 
-# Ethical Considerations
+## Ethical Considerations
 One of the primary technical challenges of this project was collecting sufficient data, and it is this data collection that provides the greatest ethical challenges as well. For one, our data sources themselves contain societal biases; Reddit especially so, as Reddit itself has a skewed user base, as 47% of its users are from the U.S. and about twice as many of its users are male than female [6]. Our selection of news sources also demonstrates a bias on our part, as we focused specifically on news sources we considered “mainstream” or “legitimate”, which are inherently subjective terms. It is possible that selecting different news sources would have changed the outcome of our analysis - for example, more tech-focused news sites might have had more positive sentiment towards WFH policies. 
 
 Another societal issue that we should address is the reasoning behind individuals voicing their opinions about remote work online. By nature, people are more likely to speak on things they are highly passionate about, whether that be in strong support or in strong opposition to remote work. Therefore, our dataset might contain a lot of sentiment strongly to one side or another, and not many hovering around the neutral range. To combat this, one solution might be to collect data of our own, whether that be polling college students on campus or asking workers in our own communities what their stance is on the issue.
@@ -56,7 +56,7 @@ Another ethical concern is whether we used the data in a manner consented to by 
 
 The final ethical quandary we must discuss is potential misinterpretations of our work. One potential misconception would be to use the fact that we did not reject the null hypothesis when comparing the average sentiments of news sources and reddit forums as proof that social media and the news are definitively aligned on the issue. Another similar misconception would be to say that the negative sentiment bias we discovered is proof that everyone is generally negative about the idea of working from home. The common thread between these is making strong claims of “proof” when in fact our analysis was largely inconclusive, and we acknowledged that more data collection and study is needed. The best way for us to prevent these misconceptions is to be upfront and clear about both the limitations of our work and all of the potential confounding factors, most saliently the general decline in mental health - and therefore sentiment - caused by the events of 2020.
 
-# Works Cited: 
+## Works Cited: 
 [1] Coate, Patrick. “Remote Work Before, During, and After the Pandemic.” National Council on Compensation Insurance (NCCI), National Council on Compensation Insurance (NCCI), 25 Jan. 2021, https://www.ncci.com/SecureDocuments/QEB/QEB_Q4_2020_RemoteWork.html.
 [2] “COVID-19 Pandemic Triggers 25% Increase in Prevalence of Anxiety and Depression Worldwide.” World Health Organization (WHO), World Health Organization, 2 Mar. 2022, https://www.who.int/news/item/02-03-2022-covid-19-pandemic-triggers-25-increase-in-prevalence-of-anxiety-and-depression-worldwide.
 [3] Putzier, Konrad, and Peter Grant. “Record High Office Lease Expirations Pose New Threat to Landlords and Banks  - WSJ.” WSJ, The Wall Street Journal, 12 Apr. 2022, https://www.wsj.com/articles/record-high-office-lease-expirations-pose-new-threat-to-landlords-and-banks-11649764801.
