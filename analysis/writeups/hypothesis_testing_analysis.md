@@ -20,7 +20,7 @@ I am fairly confident in the accuracy of the data and test and am convinced that
 
 So, we must deny the second hypothesis. Hence, this result is not in line with our prediction that sentiments would be different between reddit and news articles. This could possibly be due to the negative bias that we discuss in our general write-up.
 
-### Hypothesis 2: Sentiments regarding work from home are similiar in The Gaurdian articles compared to in The New York Times articles.
+### Hypothesis 2: Sentiments regarding work from home are similiar in The Guardian articles compared to in The New York Times articles.
 
 
 2 Sample T-Test: The Guardian Sentiments vs. NYT Sentiments
