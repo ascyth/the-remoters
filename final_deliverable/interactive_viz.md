@@ -12,3 +12,5 @@ There are two ways that you can manipulate the parameters in the graph.
 2. Change the variable for the x-axis: It can either be Date, to show the sentiment ratings over time, or it can be based on Source, to show how the sentiment ratings are distributed for each source.
 
 You can also hover on the data points, which prompts a pop-up to appear near the point, displaying the article/post link. If you click on the data point, then the pop-up near the point will stay, unless you click on it again.
+
+![A preview of the interactive visualization.](/prev_viz.png)
