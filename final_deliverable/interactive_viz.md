@@ -1,6 +1,6 @@
 The interactive visualization is live at https://johnnyboustany.github.io/remotersdataviz/.
 
-Instructions:
+# Instructions:
 
 The visualization consists of a figure displaying "Sentiments Toward Remote Work on Online Sources from 2020 to 2023."
 The y-axis remains fixed as it shows the sentiment ratings, which range from -1 (negative) to 0 (neutral) to 1 (positive).
